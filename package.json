@@ -4,7 +4,9 @@
   "description": "⚗️ A Backend for GraphQL Playground",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts"
+    "dev": "ts-node src/server.ts",
+    "build": "npm i && tsc",
+    "start": "node ./dist/server.js"
   },
   "keywords": [],
   "author": "ChocolateNao",
