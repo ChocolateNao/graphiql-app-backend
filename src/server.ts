@@ -1,10 +1,12 @@
 import express, { Request, Response } from 'express';
 import fetch from 'node-fetch';
+import cors from 'cors';
 import GraphQLRequestBody from './models/GraphQLRequestBody.interface';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 app.post('/graphql', async (req: Request<GraphQLRequestBody>, res: Response) => {
